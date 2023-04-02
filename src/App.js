@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import ListagemProdutos from './ListaProdutos/ListagemProdutos';
+import ProcuraProdutos from './ProcuraProdutos/ProcuraProdutos';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    fetch ('Produtos.json')
+    .then (resp => resp.json())
+    .then (dados => setProdutos(dados))
+    .catch(error => console.log (error));
+  }, [])
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Loja de Departamento FuturoDEV
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
+      
+    <ListagemProdutos produtos={produtos}/>
+    <ProcuraProdutos produtos={produtos}/>
     </div>
   );
 }
