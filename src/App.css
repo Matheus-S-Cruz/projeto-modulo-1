@@ -7,4 +7,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
+  grid-area: header;
+  
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* divide a página em três colunas */
+  grid-template-rows: auto 1fr auto; /* divide a página em três linhas */
+  grid-template-areas:
+    "produtos pesquisar carrinho"
+    "produtos resto carrinho"
+    "produtos cupom cupom"; /* define as áreas dos elementos na grade */
+  grid-gap: 10px; /* define o espaçamento entre as áreas */
+  padding: 10px;
+
 }

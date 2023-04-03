@@ -1,0 +1,40 @@
+.Pesquisar {
+    background-color: #e7e4dc;
+    color: rgb(0, 0, 0);
+    padding: 100x 100px;
+    display: list-item;
+        grid-area: pesquisar;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+}
+
+.carrinho {
+    background-color: #e7e4dc;
+    color: rgb(0, 0, 0);
+    padding: 10x 30px;
+    display: inline-block;
+        grid-area: carrinho;
+}
+
+
+
+.Resto {
+    background-color: #e7e4dc;
+    color: rgb(0, 0, 0);
+    padding: 10x 30px;
+    display: inline-block;
+        grid-area: resto;
+
+}
+
+.cupom {
+    background-color: #e7e4dc;
+    color: rgb(0, 0, 0);
+    padding: 10x 30px;
+    display: inline-block;
+        grid-area: cupom;
+
+}

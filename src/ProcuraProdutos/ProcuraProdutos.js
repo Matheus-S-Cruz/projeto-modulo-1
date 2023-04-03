@@ -17,8 +17,9 @@ export default function ProcuraProdutos({produtos}) {
   }
   useEffect(() => {  
     atualizarPrecoTotal();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cupom]);
-  
+
   function handleAdicionar (){
         const quantidade = quantidadeRef.current.value;
         const codigo = produtoRef.current.value;
@@ -61,7 +62,7 @@ console.log(carrinho);
       </div>
         <button onClick={handleAdicionar}>Adicionar</button>
         <div>
-          <h2>Carrinho</h2>
+          <h2 className='carrinho'>Carrinho</h2>
           <ul>
             {carrinho.map((produto, index) => (
               <li key={index}>
